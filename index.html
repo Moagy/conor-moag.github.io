@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" id="styleSheet">
+    <title>Conor Moag's CV</title>
+</head>
+<body>
+    <div id="CVButton">
+        <button><a href="CmSimpleCv.pdf">SimpleWhite CV</a></button>
+        <button><a href="CvCm.pdf">Other CV</a></button>
+    </div>
+    <div id="terminal">
+        <div id="header">
+            <button class="rounded-button">✖</button>
+            <button class="rounded-button">🗕</button>
+            <button class="rounded-button" onclick="toggleMode()">💡</button>
+            <span class="user">dan@yourcompany: ~</span>
+        </div>
+        <div id="terminal-content">
+            <div id="user-header">
+                <span class="user"><b>dan@yourcompany<span class="user-white">:<span class="user-blue">~</span>$</span></b></span>
+            </div>
+            <div id="progress-bar-container">
+                <div id="loading-text">0%</div><div id="progress-bar"></div>
+            </div>
+            <div id="content">
+                <pre>
+                    <!--Content starts here-->
+                    <p>===================<br>
+                       |  Introduction   |<br>
+                       ===================<br>
+                        As a dedicated Data Engineer, I take pride in enhancing data systems and driving positive change across the organisation. With strong
+                        attention to detail, I specialise in optimising data workflows, improving system performance, and ensuring the accuracy of data pipelines. 
+                        My eagerness to learn extends beyond engineering, driving me to explore data science methodologies and integrate them into my projects. 
+                        By implementing solutions that streamline processes and reduce inefficiencies, I am committed to delivering impactful results that advance 
+                        both data engineering and data-driven decision-making within the organisation.</p>
+
+                    <div id="skills-section">
+                        <p>===================<br>
+                           |     Skills      |<br>
+                           ===================</p>
+                        <div id="skills-lists">
+                            <div class="skills-column">
+                                <h3>Technical Skills</h3>
+                                <ul>
+                                    <li>SQL</li>
+                                    <li>Version Control- Git/GitHub</li>
+                                    <li>Data Pipelines</li>
+                                    <li>ETL Processes</li>
+                                    <li>Cloud Computing (Azure)</li>
+                                    <li>Python</li>
+                                    <li>Data Warehousing</li>
+                                </ul>
+                            </div>
+                            <div class="skills-column">
+                                <h3>Soft Skills</h3>
+                                <ul>
+                                    <li>Communication</li>
+                                    <li>Problem-solving</li>
+                                    <li>Adaptability</li>
+                                    <li>Teamwork</li>
+                                    <li>Attention to Detail</li>
+                                    <li>Critical Thinking</li>
+                                    <li>Time Management</li>
+                                    <li>Leadership</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                        
+                    <div id="experiences-section">
+                        <p>===================<br>
+                           |   Experiences   |<br>
+                           ===================</p>
+                    
+                        <!-- Job 1 -->
+                        <div class="experience">
+                            <h3>Data Engineer, ABC Tech</h3>
+                            <p><em>September 2024 - Present</em></p>
+                            <p>At DiiS, I am responsible for building and maintaining data pipelines, ensuring data quality, and optimizing workflows to improve 
+                                system efficiency.</p>
+                            <ul class="achievements">
+                                <li>Successfully promoted using the NCF and spoke on a podcase, Fika Bites, about my experience with it.</li>
+                                <li>Made improvements to a national script for generating Statistical Process Chart (SPC) data for reports, owned by NHS-England, 
+                                    reducing processing time from 4.5-5hours down to 20-22.5minutes.
+                                </li>
+                            </ul>
+                        </div>
+                    
+                        <!-- Job 2 -->
+                        <div class="experience">
+                            <h3>Junior Data Engineer, DiiS</h3>
+                            <p><em>March 2023 - September 2024</em></p>
+                            <p>At DiiS, I contributed to the development of scalable data solutions, supporting cross-functional teams with data integration and analysis.</p>
+                            <ul class="achievements">
+                                <li>Adopted the National Competency Framework (NCF), demo'd my use for it at an organisational level and national level and advocated
+                                    for the framework. I supported colleagues with their use of the framework.
+                                </li>
+                                <li>Automated routine data extraction processes, saving 10 hours per week.</li>
+                            </ul>
+                        </div>
+                    
+                        <!-- Job 3 -->
+                        <div class="experience">
+                            <h3>Team Leader and Labourer, MagnaKata</h3>
+                            <p><em>July 2019 - August 2020</em></p>
+                            <p>During my internship at DEF Solutions, I worked on data analysis projects, helping the team derive insights from data to drive business decisions.</p>
+                            <ul class="achievements">
+                                <li>Produced actionable insights from large datasets, increasing marketing ROI by 10%.</li>
+                                <li>Collaborated on a project to improve reporting efficiency, cutting report generation time by 40%.</li>
+                            </ul>
+                        </div>
+                    
+                    </div>
+                    
+                    <p>===================<br>
+                       |    Education    |<br>
+                       ===================</p>
+                    <div class="lists">
+                        <p class = list>
+                            <span class="user-blue">BSc Degree:</span><br>
+                            Coventry University: B.Sc. Computer Science [Graduated Jul 2023]<br>
+                            2:1 (68.7%)
+                        </p>
+                        <p class="list">
+                            <span class="user-blue">Key Modules:</span><br>
+                            Advanced Algorithms (First), Programming and Algorithms (First), Computer Architecture and Networks (First), Object Orientated 
+                            Programming (First), Introduction to Artificial Intellegence (First), Theory of Computation (First), Cyber Security (First), 
+                            Machine Learning and Related Algorithsm (2:1), Database Systems (2:1), Mathematics for Computer Science (2:1), 
+                        </p>
+                        <p class="list">
+                            <span class="user-blue">High School:</span><br>
+                            3 A-Levels in Mathematics (D), Sociology (C) and Business Studies (D)<br>
+                            10 GCSEs (A-B), including English, Further Mathematics and 3 Sciences.
+                        </p>
+                    </div>
+
+                    <!--Content ends here-->
+                </pre>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Toggle between light and dark mode
+        function toggleMode() {
+            const body = document.body;
+            const terminal = document.getElementById("terminal");
+
+            // Toggle the body class for light/dark mode
+            body.classList.toggle("light-mode");
+            body.classList.toggle("dark-mode");
+
+            // Toggle the terminal class for dark mode border color
+            terminal.classList.toggle("dark-mode");
+        }
+    </script>
+</body>
+</html>
