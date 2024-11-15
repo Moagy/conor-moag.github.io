@@ -52,13 +52,8 @@
                                     <li>Cloud Computing (Azure)</li>
                                     <li>Python</li>
                                     <li>Data Warehousing</li>
-                                </ul>
-                            </div>
-                            <div class="skills-column">
-                                <h3>Soft Skills</h3>
-                                <ul>
-                                    <li>Communication</li>
                                     <li>Problem-solving</li>
+                                    <li>Automation</li>
                                     <li>Adaptability</li>
                                     <li>Teamwork</li>
                                     <li>Attention to Detail</li>
@@ -82,9 +77,15 @@
                             <p>At DiiS, I am responsible for building and maintaining data pipelines, ensuring data quality, and optimizing workflows to improve 
                                 system efficiency.</p>
                             <ul class="achievements">
-                                <li>Successfully promoted using the NCF and spoke on a podcase, Fika Bites, about my experience with it.</li>
-                                <li>Made improvements to a national script for generating Statistical Process Chart (SPC) data for reports, owned by NHS-England, 
-                                    reducing processing time from 4.5-5hours down to 20-22.5minutes.
+                                <li>Successfully promoted using the NCF and spoke on a podcase, Fika Bites, about my experience with it. Support lead engineers in other
+                                    organisations to encourage data professionals to use the framework.
+                                </li>
+                                <li>Optimized a national data processing script for NHS-England, reducing execution time by over 90% (from 4.5 hours to 22 minutes), enhancing
+                                    reporting efficiency and enabling faster decision-making.
+                                </li>
+                                <li>Implemented an automated failure-reporting system from DevOps into teams notifying the engineering team of success and failures from 
+                                    pipelines run in ADF. As well as this, a teams channel allowing stakeholders to report data issues and failures was created to promote
+                                    quick and seemless issue resolution.
                                 </li>
                             </ul>
                         </div>
@@ -98,7 +99,8 @@
                                 <li>Adopted the National Competency Framework (NCF), demo'd my use for it at an organisational level and national level and advocated
                                     for the framework. I supported colleagues with their use of the framework.
                                 </li>
-                                <li>Automated routine data extraction processes, saving 10 hours per week.</li>
+                                <li>Designed and implemented a Poweshell automation script for deployment of databses and unit tests, reducing manual effort by 80% and saving 
+                                    approximately 100 hours per month across the team.</li>
                             </ul>
                         </div>
                     
@@ -137,6 +139,30 @@
                         </p>
                     </div>
 
+                    <p>===================<br>
+                        | Personal Details |<br>
+                        ===================</p>
+                     <div id="personal-details" style="display: none;">
+                         <ul>
+                             <li><strong>Name:</strong> Conor Moag</li>
+                             <li><strong>Location:</strong> Dorset, UK</li>
+                             <li><strong>Email:</strong> <a href="mailto:conormoag7@gmail.com.com">youremail@example.com</a></li>
+                             <li><strong>Phone:</strong> +44 7305 549192</li>
+                             <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/myprofile</a></li>
+                         </ul>
+                     </div>
+                     <div class="about-me">
+                        <h3>About Me</h3>
+                        <p></p>
+                        <ul class="personal-achievements">
+                            <li>Produced actionable insights from large datasets, increasing marketing ROI by 10%.</li>
+                            <li>Collaborated on a project to improve reporting efficiency, cutting report generation time by 40%.</li>
+                        </ul>
+                    </div>
+
+                     <button id="toggle-details" onclick="togglePersonalDetails()">Show Personal Details</button>
+                     
+
                     <!--Content ends here-->
                 </pre>
             </div>
@@ -158,5 +184,22 @@
             terminal.classList.toggle("dark-mode");
         }
     </script>
+
+    <script>
+        function togglePersonalDetails() {
+            const personalDetails = document.getElementById("personal-details");
+            const toggleButton = document.getElementById("toggle-details");
+
+            // Toggle display
+            if (personalDetails.style.display === "none") {
+                personalDetails.style.display = "block";
+                toggleButton.textContent = "Hide Personal Details";
+            } else {
+                personalDetails.style.display = "none";
+                toggleButton.textContent = "Show Personal Details";
+            }
+        }
+    </script>
+
 </body>
 </html>
