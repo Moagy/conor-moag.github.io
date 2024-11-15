@@ -1,42 +1,17 @@
-/* Dark mode styles */
-body {
-    font-family: 'Fira Code Medium', monospace;
+/* Global styles */
+html, body {
+    height: 100%;
+    width: 100%;
     margin: 0;
-    background-color: #000;
-    color: #fff;
-    transition: background-color 0.5s, color 0.5s;
+    font-family: 'Fira Code Medium', monospace;
+    overflow: hidden; /* Prevent extra scroll issues */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-#terminal {
-    position: relative;
-    width: 80%;
-
-    padding: 10px;
-    padding-top: 50px;
-    background-color: #300a24;
-    border: 4px solid #2f3030;
-    border-radius: 9px;
-    transition: background-color 0.5s, border-color 0.5s;
-    height: 100%;
-}
-#terminal-content {
-    height: 80vh;
-    overflow-y: auto;
-}
-#CVButton {
-    padding: 30px;
-}
-
-
-/* Hide loading bar */
-#progress-bar-container {
-    display: flex;
-    display: none;
-    align-items: center;
+    background-color: #000; /* Default dark mode */
+    color: #fff;
+    transition: background-color 0.5s, color 0.5s;
 }
 
 /* Light mode styles */
@@ -50,11 +25,34 @@ body.light-mode #terminal {
     background-color: #fff;
 }
 
+/* Terminal styles */
+#terminal {
+    position: relative;
+    width: 100%;
+    max-width: 1200px; /* Limit max width for larger screens */
+    min-height: 80vh;
+    padding: 10px;
+    padding-top: 50px;
+    background-color: #300a24;
+    border: 4px solid #2f3030;
+    border-radius: 9px;
+    overflow: hidden;
+    transition: background-color 0.5s, border-color 0.5s;
+}
+
+#terminal-content {
+    max-height: 70vh;
+    padding: 20px;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+/* Header styles */
 #header {
     background-color: #444;
     color: white;
     padding: 10px;
-    position:absolute;
+    position: absolute;
     border-radius: 5px 5px 0 0;
     top: 0;
     left: 0;
@@ -65,6 +63,7 @@ body.light-mode #terminal {
     border-radius: 50%;
 }
 
+/* User and command prompt styles */
 .user {
     color: #8ad932;
 }
@@ -72,6 +71,7 @@ body.light-mode #terminal {
 .user-white {
     color: #fff;
 }
+
 .user-blue {
     color: #3264ad;
 }
@@ -80,39 +80,137 @@ body.light-mode #terminal {
     color: #fff;
 }
 
-.lists {
-        display: flex;
-        list-style-type: none;
-        padding: 0;
-    }
-
-
-.list {
-        margin:10px;
-	width:50%;
-    }
-
-#content {
-    line-height: 1.6;
-    display: none;	
+/* CV download buttons */
+#CVButton {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
 }
 
+#CVButton button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: #3264ad;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+#CVButton button a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Loading bar styles */
+#progress-bar-container {
+    display: flex;
+    align-items: center;
+}
+
+#progress-bar-container {
+    display: none; /* Hide loading bar initially */
+}
+
+/* Skills section styling */
+#skills-section, #experiences-section {
+    margin-top: 20px;
+}
+
+#skills-lists {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.skills-column {
+    width: 45%;
+}
+
+/* List styles */
 ul {
-  list-style: none;
-  margin: 0;
-  padding-left: 0;
-}
-
-p {
-  margin: 0;
+    list-style-type: disc; /* Default bullet points */
+    margin: 10px 20px;
+    padding-left: 0;
 }
 
 li {
-  padding-left: 1em;
-  text-indent: -1em;
+    padding-left: 0;
+    text-indent: 0;
 }
 
 li:before {
-  content: "*";
-  padding-right: 5px;
+    content: ""; /* Remove the extra "*" character */
+}
+
+/* Content visibility fix */
+#content {
+    line-height: 1.6;
+    display: block; /* Make content visible */
+}
+
+/* Experience list styling */
+.experience {
+    margin-bottom: 20px;
+}
+
+.achievements {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+/* List container styling */
+.lists {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+.list {
+    margin: 10px;
+    width: 50%;
+}
+
+/* Personal details toggling */
+#personal-details {
+    display: none;
+    margin-top: 20px;
+}
+
+#toggle-details {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    background-color: #3264ad;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+/* Media queries for responsive design */
+@media screen and (max-width: 768px) {
+    #terminal {
+        width: 95%;
+        padding: 10px;
+    }
+
+    #skills-lists {
+        flex-direction: column;
+    }
+
+    .lists {
+        flex-direction: column;
+    }
+
+    .list {
+        width: 100%;
+    }
+
+    #CVButton {
+        flex-direction: column;
+        gap: 10px;
+    }
 }
